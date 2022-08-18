@@ -2,6 +2,8 @@ UpMod
 ===
 Adds colored glass panes.
 
+![alt text](https://github.com/mightpossibly/upmod/blob/main/screenshot.png)
+
 Crafting
 ---------
 Coloured glass panes are crafted from six glass nodes and the matching dye.
