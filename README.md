@@ -24,6 +24,10 @@ Crafting
 Coloured glass panes are crafted from six glass nodes and the matching dye.
 All other nodes are currently only available in Creative. Crafting recipes tba.
 
+Known issues
+---------
+An engine bug causes textures that are semi-transparent (i.e. the textures for the glass panes) to flicker in-game. The only known work-around is to replace "pmod_plainglass.png"with "pmod_plainglass_noalpha.png". This removes the the flickering, but also makes the glass panes look less nice (as there is no longer a color tint).
+
 Licenses and Attribution 
 -----------------------
 
