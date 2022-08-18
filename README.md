@@ -1,6 +1,9 @@
 UpMod
 ===
 
+Minetest mod for testing various stuff in The Uplift
+---
+
 **nodes.lua** adds various nodes. Currently adds:
 - Iron Bar Floor
 - Nether Bricks
@@ -8,7 +11,7 @@ UpMod
 - White Lamp
 
 **overrides.lua** enhances various default nodes. Currently enhances the following default blocks; 
-- Jungle log
+- Jungle Log
 
 ![alt text](https://github.com/mightpossibly/upmod/blob/main/allnodes.png)
 
@@ -19,7 +22,7 @@ UpMod
 Crafting
 ---------
 Coloured glass panes are crafted from six glass nodes and the matching dye.
-
+All other nodes are currently only available in Creative. Crafting recipes tba.
 
 Licenses and Attribution 
 -----------------------
