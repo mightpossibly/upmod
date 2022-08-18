@@ -16,7 +16,7 @@ function register_pane(name, def)
 		wield_image = def.wield_image,
 		paramtype2 = "facedir",
 		use_texture_alpha = true,
-		light_source = 4,
+		-- light_source = 4,
 		tiles = {def.textures[3], def.textures[3], def.textures[3], def.textures[3], def.textures[1], def.textures[1]}, 
 		groups = flatgroups,
 		drop = "xpanes:" .. name .. "_flat",
