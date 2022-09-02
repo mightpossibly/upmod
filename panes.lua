@@ -16,7 +16,7 @@ function register_pane(name, def)
 		wield_image = def.wield_image,
 		paramtype2 = "facedir",
 		use_texture_alpha = true,
-		--light_source = 4,
+		-- light_source = 4,
 		tiles = {def.textures[3], def.textures[3], def.textures[3], def.textures[3], def.textures[1], def.textures[1]}, 
 		groups = flatgroups,
 		drop = "xpanes:" .. name .. "_flat",
@@ -41,7 +41,7 @@ function register_pane(name, def)
 		is_ground_content = false,
 		sunlight_propagates = true,
 		use_texture_alpha = true,
-		--light_source = 4,
+		light_source = 4,
 		description = def.description,
 		tiles = {def.textures[3], def.textures[3], def.textures[1]},
 		groups = groups,
@@ -76,7 +76,6 @@ for i in ipairs(panes_list) do
 	local name = panes_list[i][1]
 	local description = panes_list[i][2]
 	local colour = panes_list[i][3]
-	-- the numbers at the end of the two rows below controls node alpha. Accepts numbers between 0-255
 	local tex = "upmod_plainglass.png^[colorize:#"..colour..":35"
 	local texedge = "upmod_glassedge.png^[colorize:#"..colour..":35"
 
