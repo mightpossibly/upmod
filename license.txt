@@ -7,7 +7,7 @@ Code:
 License: MIT (https://opensource.org/licenses/MIT)
 By mightpossibly
 
-Fork of mod "abriglass" By Shara RedCat (https://github.com/Ezhh/abripanes)
+Code found in panes.lua is a fork of mod "abriglass" By Shara RedCat (https://github.com/Ezhh/abripanes)
 
 Registry code adapted from xpanes mod in minetest_game (https://github.com/minetest/minetest_game/tree/master/mods/xpanes)
 
