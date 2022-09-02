@@ -1,3 +1,4 @@
+-- White Lamp
 minetest.register_node("upmod:white_lamp", {
 	description = "White Lamp",
 	paramtype2 = "facedir",
@@ -12,7 +13,62 @@ minetest.register_node("upmod:white_lamp", {
 	light_source = default.LIGHT_MAX,
 })
 
+-- Colored Sea Lanterns
+minetest.register_node("upmod:red_sea_lantern", {
+		description = "Red Sea Lantern",
+		tiles = {"upmod_red_sea_lantern.png"},
+		groups = {cracky = 3},
+		sunlight_propagates = true,
+		is_ground_content = false,
+		groups = {cracky = 3, oddly_breakable_by_hand = 3, },
+		sounds = default.node_sound_glass_defaults(),
+			light_source = default.LIGHT_MAX,
+	})
 
+minetest.register_node("upmod:green_sea_lantern", {
+		description = "Green Sea Lantern",
+		tiles = {"upmod_green_sea_lantern.png"},
+		groups = {cracky = 3},
+		sunlight_propagates = true,
+		is_ground_content = false,
+		groups = {cracky = 3, oddly_breakable_by_hand = 3, },
+		sounds = default.node_sound_glass_defaults(),
+			light_source = default.LIGHT_MAX,
+	})
+
+minetest.register_node("upmod:purple_sea_lantern", {
+		description = "Purple Sea Lantern",
+		tiles = {"upmod_purple_sea_lantern.png"},
+		groups = {cracky = 3},
+		sunlight_propagates = true,
+		is_ground_content = false,
+		groups = {cracky = 3, oddly_breakable_by_hand = 3, },
+		sounds = default.node_sound_glass_defaults(),
+			light_source = default.LIGHT_MAX,
+	})
+
+minetest.register_node("upmod:blue_sea_lantern", {
+		description = "Blue Sea Lantern",
+		tiles = {"upmod_blue_sea_lantern.png"},
+		groups = {cracky = 3},
+		sunlight_propagates = true,
+		is_ground_content = false,
+		groups = {cracky = 3, oddly_breakable_by_hand = 3, },
+		sounds = default.node_sound_glass_defaults(),
+			light_source = default.LIGHT_MAX,
+	})
+	
+minetest.register_node("upmod:yellow_sea_lantern", {
+		description = "Yellow Sea Lantern",
+		tiles = {"upmod_yellow_sea_lantern.png"},
+		groups = {cracky = 3},
+		sunlight_propagates = true,
+		is_ground_content = false,
+		groups = {cracky = 3, oddly_breakable_by_hand = 3, },
+		sounds = default.node_sound_glass_defaults(),
+			light_source = default.LIGHT_MAX,
+	})
+	
 -- Smooth variants of various stone blocks
 minetest.register_node("upmod:smooth_desert_sandstone", {
 	description = "Smooth Desert Sandstone",

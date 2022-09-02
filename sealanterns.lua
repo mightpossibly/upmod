@@ -1,6 +1,19 @@
 local stairsplus_mod = minetest.get_modpath("moreblocks")
         and minetest.global_exists("stairsplus")
 
+minetest.register_node("upmod:red_sea_lantern", {
+		description = "Red Sea Lantern",
+		tiles = {"upmod_red_sea_lantern"},
+		groups = {cracky = 3},
+		sunlight_propagates = true,
+		is_ground_content = false,
+		groups = {cracky = 3, oddly_breakable_by_hand = 3, },
+		sounds = default.node_sound_glass_defaults(),
+	})
+end
+
+
+
 local dyes = {
 	{"white",      "White",		true,  "#fff", default.LIGHT_MAX},
 	{"grey",       "Grey",		true,  "#aaa", default.LIGHT_MAX * 0.7},
