@@ -36,9 +36,9 @@ minetest.register_node("upmod:green_sea_lantern", {
 			light_source = default.LIGHT_MAX,
 	})
 
-minetest.register_node("upmod:purple_sea_lantern", {
-		description = "Purple Sea Lantern",
-		tiles = {"upmod_purple_sea_lantern.png"},
+minetest.register_node("upmod:magenta_sea_lantern", {
+		description = "Magenta Sea Lantern",
+		tiles = {"upmod_magenta_sea_lantern.png"},
 		groups = {cracky = 3},
 		sunlight_propagates = true,
 		is_ground_content = false,
@@ -69,6 +69,49 @@ minetest.register_node("upmod:yellow_sea_lantern", {
 			light_source = default.LIGHT_MAX,
 	})
 	
+-- Crafting recipes for Colored Sea Lanterns
+minetest.register_craft({
+    type = "shapeless",
+    output = "upmod:red_sea_lantern",
+    recipe = {
+        "xocean:sea_lantern",
+        "dye:red",
+    },
+})
+minetest.register_craft({
+    type = "shapeless",
+    output = "upmod:green_sea_lantern",
+    recipe = {
+        "xocean:sea_lantern",
+        "dye:green",
+    },
+})
+minetest.register_craft({
+    type = "shapeless",
+    output = "upmod:magenta_sea_lantern",
+    recipe = {
+        "xocean:sea_lantern",
+        "dye:magenta",
+    },
+})
+minetest.register_craft({
+    type = "shapeless",
+    output = "upmod:blue_sea_lantern",
+    recipe = {
+        "xocean:sea_lantern",
+        "dye:blue",
+    },
+})
+minetest.register_craft({
+    type = "shapeless",
+    output = "upmod:yellow_sea_lantern",
+    recipe = {
+        "xocean:sea_lantern",
+        "dye:yellow",
+    },
+})
+
+
 -- Smooth variants of various stone blocks
 minetest.register_node("upmod:smooth_desert_sandstone", {
 	description = "Smooth Desert Sandstone",
