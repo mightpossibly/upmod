@@ -94,6 +94,28 @@ minetest.register_node("upmod:smooth_sandstone", {
 	sounds = default.node_sound_stone_defaults(),
 })
 
+-- Add Stairs & Slabs
+stairs.register_stair_and_slab("smooth_desert_sandstone", "upmod:smooth_desert_sandstone",
+   {cracky=2},
+   {"upmod_smooth_desert_sandstone.png" },
+   ("Smooth Desert Sandstone Stair"),
+   ("Smooth Desert Sandstone Slab"),
+   default.node_sound_stone_defaults())
+   
+   stairs.register_stair_and_slab("smooth_quartz", "upmod:smooth_quartz",
+   {cracky=2},
+   {"upmod_smooth_quartz.png" },
+   ("Smooth Quartz Stair"),
+   ("Smooth Quartz Slab"),
+   default.node_sound_stone_defaults())
+   
+   stairs.register_stair_and_slab("smooth_sandstone", "upmod:smooth_sandstone",
+   {cracky=2},
+   {"upmod_smooth_sandstone.png" },
+   ("Smooth Sandstone Stair"),
+   ("Smooth Sandstone Slab"),
+   default.node_sound_stone_defaults())
+
 -- Furnace Recipes for the smooth stones
 minetest.register_craft({
 	type = "cooking",
