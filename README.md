@@ -3,7 +3,7 @@ upmod
 Feature list:
 - Colored Glass Panes. Craftable from six glass nodes and the matching dye.
 - Smooth Stone types; Sandstone, Desert Sandstone and Quartz. Craftable by burning base stone in furnace
-- 5 new sea lanterns in different colors. Uncraftable atm
+- 5 new sea lanterns in different colors; Red, Green, Yellow, Magenta, Blue. Can be crafted by combining Sea Lantern with corresponding dye
 
 
 Licenses and Attribution 
