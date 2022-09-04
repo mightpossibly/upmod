@@ -179,6 +179,62 @@ minetest.register_craft({
 	cooktime = 10,
 })
 
+-- Ice
+minetest.register_node("upmod:packed_ice", {
+	description = ("Packed Ice"),
+	tiles = {"upmod_packed_ice.png"},
+	is_ground_content = false,
+	paramtype = "light",
+	groups = {cracky = 3, cools_lava = 1, slippery = 7},
+	sounds = default.node_sound_ice_defaults(),
+})
+
+minetest.register_node("upmod:dark_ice", {
+	description = ("Dark Ice"),
+	tiles = {"upmod_dark_ice.png"},
+	is_ground_content = false,
+	paramtype = "light",
+	groups = {cracky = 3, cools_lava = 1, slippery = 16},
+	sounds = default.node_sound_ice_defaults(),
+})
+
+minetest.register_craft({
+    type = "shapeless",
+    output = "upmod:packed_ice",
+    recipe = {
+        "default:ice","default:ice","default:ice",
+        "default:ice","default:ice","default:ice",
+		"default:ice","default:ice","default:ice",
+    },
+})
+
+minetest.register_craft({
+    type = "shapeless",
+    output = "upmod:dark_ice",
+    recipe = {
+        "upmod:packed_ice","upmod:packed_ice","upmod:packed_ice",
+        "upmod:packed_ice","upmod:packed_ice","upmod:packed_ice",
+		"upmod:packed_ice","upmod:packed_ice","upmod:packed_ice",
+    },
+})
+
+minetest.register_craft({
+    type = "shapeless",
+    output = "default:ice 9",
+    recipe = {
+	"upmod:packed_ice",
+    },
+})
+
+minetest.register_craft({
+    type = "shapeless",
+    output = "upmod:packed_ice 9",
+    recipe = {
+	"upmod:dark_ice",
+    },
+})
+
+
 -- Iron Bar Floor
 minetest.register_node("upmod:iron_bar_floor", {
 	description = "Iron Bars (floor)",
