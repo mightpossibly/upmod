@@ -258,3 +258,11 @@ minetest.register_node("upmod:iron_bar_floor", {
 		}
 	}
 })
+
+-- Ocean stone aka prismarine
+minetest.register_node("upmod:dark_ocean_stone", {
+	description = "Dark Ocean Stone",
+	tiles = {"upmod_dark_ocean_stone.png"},
+	is_ground_content = false,
+	groups = {cracky = 2},
+})
