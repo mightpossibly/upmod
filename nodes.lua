@@ -258,11 +258,64 @@ minetest.register_node("upmod:iron_bar_floor", {
 		}
 	}
 })
-
--- Ocean stone aka prismarine
+-- OCEAN STUFF
+---------------------------
+-- Ocean stone aka prismarine (xocean supplements)
 minetest.register_node("upmod:dark_ocean_stone", {
 	description = "Dark Ocean Stone",
 	tiles = {"upmod_dark_ocean_stone.png"},
 	is_ground_content = false,
 	groups = {cracky = 2},
+})
+
+-- Register items; Shards and crystal
+minetest.register_craftitem("upmod:ocean_shard", {
+	description = "Ocean Shard",
+	inventory_image = "upmod_ocean_shard.png",
+})
+
+minetest.register_craftitem("upmod:ocean_crystals", {
+	description = "Ocean Crystals",
+	inventory_image = "upmod_ocean_crystals.png",
+})
+
+-- Register crafting recipes
+minetest.register_craft({
+    type = "shaped",
+    output = "upmod:dark_ocean_stone",
+    recipe = {
+        {"upmod:ocean_shard",	"upmod:ocean_shard",	"upmod:ocean_shard"},
+        {"upmod:ocean_shard",	"dye:black",	"upmod:ocean_shard"},
+		{"upmod:ocean_shard",	"upmod:ocean_shard",	"upmod:ocean_shard"}
+    }
+})
+
+minetest.register_craft({
+    type = "shaped",
+    output = "xocean:sea_lantern",
+    recipe = {
+        {"upmod:ocean_shard",	"upmod:ocean_crystals",	"upmod:ocean_shard"},
+        {"upmod:ocean_crystals",	"upmod:ocean_crystals",	"upmod:ocean_crystals"},
+		{"upmod:ocean_shard",	"upmod:ocean_crystals",	"upmod:ocean_shard"}
+    }
+})
+
+minetest.register_craft({
+    type = "shaped",
+    output = "xocean:ocean_cobble",
+        recipe = {
+        {"", "", ""},
+        {"upmod:ocean_shard", "upmod:ocean_shard",  ""},
+        {"upmod:ocean_shard", "upmod:ocean_shard",  ""},
+    }
+})
+
+minetest.register_craft({
+    type = "shapeless",
+    output = "xocean:ocean_carved",
+    recipe = {
+        "upmod:ocean_shard","upmod:ocean_shard","upmod:ocean_shard",
+        "upmod:ocean_shard","upmod:ocean_shard","upmod:ocean_shard",
+		"upmod:ocean_shard","upmod:ocean_shard","upmod:ocean_shard",
+    },
 })
