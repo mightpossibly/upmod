@@ -321,8 +321,8 @@ minetest.register_craft({
 })
 
 
-minetest.register_node("upmod:selector", {
-	description = "Selector",
+minetest.register_node("upmod:selector_demo", {
+	description = "Selector (demo node)",
 	paramtype2 = "facedir",
 	tiles = {
 		"atm_top.png", "atm_top.png",
