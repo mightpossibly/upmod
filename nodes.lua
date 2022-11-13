@@ -358,7 +358,7 @@ beds.register_bed("upmod:bed_rainbow", {
 	recipe = {
 		{"wool:red", "wool:blue", "wool:yellow"},
 		{"group:wood", "group:wood", "group:wood"}
-	}
+	},
 })
 
 beds.register_bed("upmod:bed_funkysunset", {
