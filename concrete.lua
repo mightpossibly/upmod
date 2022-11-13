@@ -1,23 +1,55 @@
--- Load support for MT game translation.
-local S = minetest.get_translator("wool")
+---- Concrete
 
+local S = minetest.get_translator("concrete")
 local dyes = dye.dyes
 
 for i = 1, #dyes do
 	local name, desc = unpack(dyes[i])
-
-	minetest.register_node("upmod:concrete" .. name, {
+	
+	-- Register the concrete blocks: 1 color for each dye present
+	minetest.register_node("upmod:" .. name .."_concrete", {
 		description = S(desc .. " Concrete"),
-		tiles = {"upmod_concrete_" .. name .. ".png"},
+		tiles = {"concrete_" .. name .. ".png"},
 		is_ground_content = false,
-		groups = {snappy = 2, choppy = 2, oddly_breakable_by_hand = 3,
-				flammable = 3, wool = 1},
-		sounds = default.node_sound_defaults(),
+		groups = {cracky = 3},
+		sounds = default.node_sound_stone_defaults(),
 	})
-
+	
+	-- Register the crafting recipes for the concrete blocks
 	minetest.register_craft{
 		type = "shapeless",
-		output = "concrete:" .. name,
-		recipe = {"group:dye,color_" .. name, "group:concrete"},
+		output = "upmod:concrete_" .. name,
+		recipe = {"group:dye,color_" .. name, "group:sand", "group:sand",
+					"group:sand", "group:sand", "default:gravel",
+					"default:gravel", "default:gravel", "default:gravel",
+		},	
 	}
+	
+	-- Register moreblocks variations of the concrete blocks (if moreblocks is present)
+	if minetest.get_modpath("moreblocks") then
+		stairsplus:register_all("moreblocks", "upmod:concrete_" .. name, "upmod:concrete_" .. name,{
+			description = S(desc .. " Concrete"),
+			tiles = {"concrete_" .. name .. ".png"},
+			groups = {cracky = 3},
+			sounds = default.node_sound_stone_defaults(),
+		})
+	end
 end
+
+-- Backwards compatibility: Replace colored_concrete with the new ones in upmod
+minetest.register_alias("colored_concrete:white", "upmod:white_concrete")
+minetest.register_alias("colored_concrete:gray", "upmod:grey_concrete")
+minetest.register_alias("colored_concrete:darkgray", "upmod:dark_grey_concrete")
+minetest.register_alias("colored_concrete:black", "upmod:black_concrete")
+minetest.register_alias("colored_concrete:red", "upmod:red_concrete")
+minetest.register_alias("colored_concrete:pink", "upmod:pink_concrete")
+minetest.register_alias("colored_concrete:yellow", "upmod:yellow_concrete")
+minetest.register_alias("colored_concrete:orange", "upmod:orange_concrete")
+minetest.register_alias("colored_concrete:brown", "upmod:brown_concrete")
+minetest.register_alias("colored_concrete:green", "upmod:dark_green_concrete")
+minetest.register_alias("colored_concrete:lightgreen", "upmod:green_concrete")
+minetest.register_alias("colored_concrete:turquoise", "upmod:cyan_concrete")
+minetest.register_alias("colored_concrete:lightblue", "upmod:light_blue_concrete")
+minetest.register_alias("colored_concrete:blue", "upmod:blue_concrete")
+minetest.register_alias("colored_concrete:violet", "upmod:violet_concrete")
+minetest.register_alias("colored_concrete:magenta", "upmod:magenta_concrete")

@@ -388,3 +388,4 @@ beds.register_bed("upmod:bed_black", {
 		{"group:wood", "group:wood", "group:wood"}
 	}
 })
+
