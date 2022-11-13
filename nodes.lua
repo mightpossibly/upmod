@@ -345,3 +345,46 @@ minetest.register_node("upmod:selector_demo", {
 	is_ground_content = false,
 	sounds = default.node_sound_stone_defaults(),
 })
+
+
+beds.register_bed("upmod:bed_rainbow", {
+	description = ("Simple Rainbow Bed"),
+	inventory_image = "beds_bed_rainbow.png",
+	wield_image = "beds_bed_rainbow.png",
+	tiles = {"beds_simple_bed_rainbow.png"},
+	mesh = "beds_simple_bed.obj",
+	selectionbox = {-0.5, -0.5, -0.5, 0.5, 0.06, 1.5},
+	collisionbox = {-0.5, -0.5, -0.5, 0.5, 0.06, 1.5},
+	recipe = {
+		{"wool:red", "wool:blue", "wool:yellow"},
+		{"group:wood", "group:wood", "group:wood"}
+	}
+})
+
+beds.register_bed("upmod:bed_funkysunset", {
+	description = ("Simple Funky Sunset Bed"),
+	inventory_image = "beds_bed_funkysunset.png",
+	wield_image = "beds_bed_funkysunset.png",
+	tiles = {"beds_simple_bed_funkysunset.png"},
+	mesh = "beds_simple_bed.obj",
+	selectionbox = {-0.5, -0.5, -0.5, 0.5, 0.06, 1.5},
+	collisionbox = {-0.5, -0.5, -0.5, 0.5, 0.06, 1.5},
+	recipe = {
+		{"wool:orange", "wool:orange", "wool:orange"},
+		{"group:wood", "group:wood", "group:wood"}
+	}
+})
+
+beds.register_bed("upmod:bed_black", {
+	description = ("Simple Black Bed"),
+	inventory_image = "beds_bed_black.png",
+	wield_image = "beds_bed_black.png",
+	tiles = {"beds_simple_bed_black.png"},
+	mesh = "beds_simple_bed.obj",
+	selectionbox = {-0.5, -0.5, -0.5, 0.5, 0.06, 1.5},
+	collisionbox = {-0.5, -0.5, -0.5, 0.5, 0.06, 1.5},
+	recipe = {
+		{"wool:black", "wool:black", "wool:black"},
+		{"group:wood", "group:wood", "group:wood"}
+	}
+})

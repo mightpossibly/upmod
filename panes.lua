@@ -65,11 +65,22 @@ function register_pane(name, def)
 end
 
 local panes_list = {
-	{"white", "White", "ffffff", }, {"blue", "Blue", "0000FF", },
-	{"cyan", "Cyan", "00FFFF", }, {"green", "Green", "00FF00", }, 
-	{"magenta", "Magenta", "FF00FF", }, {"orange", "Orange", "FF6103", }, 
-	{"violet", "Purple", "800080", }, {"red", "Red", "FF0000", }, 
-	{"yellow", "Yellow", "FFFF00", },
+	{"white",		"White", 		"FFFFFF",},
+	{"grey",		"Grey", 		"5A5A5A",},
+	{"dark_grey",	"Dark Grey", 	"2A2A2A",},
+	{"black",		"Black", 		"000000",},
+	{"violet",		"Violet", 		"4D276A",}, 
+	{"blue",		"Blue", 		"3E5AAD",},
+	{"cyan",		"Cyan",			"517D99",},
+	{"dark_green",	"Dark Green", 	"52803B",}, 
+	{"green",		"Green", 		"48AD45",},
+	{"yellow",		"Yellow", 		"E1E148",},
+	{"brown",		"Brown", 		"4F2425",}, 
+	{"orange",		"Orange",		"D77D42",},
+	{"red",			"Red",			"AF1B27",},
+	{"magenta",		"Magenta",		"C750D6",},
+	{"pink",		"Pink", 		"EA84AD",},
+	{"light_blue",	"Light Blue",	"40A1D6",}
 }
 
 for i in ipairs(panes_list) do
