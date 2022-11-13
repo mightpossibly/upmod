@@ -161,6 +161,7 @@ end
 --]]
 
 -- Backwards compatibility: Replace abriglass with new ones
+minetest.register_alias("abriglass:stained_glass_frosted", "upmod:stained_glass_white")
 minetest.register_alias("abriglass:stained_glass_white", "upmod:stained_glass_white")
 minetest.register_alias("abriglass:stained_glass_grey", "upmod:stained_glass_grey")
 minetest.register_alias("abriglass:stained_glass_dark_grey", "upmod:stained_glass_dark_grey")
@@ -176,6 +177,7 @@ minetest.register_alias("abriglass:stained_glass_cyan", "upmod:stained_glass_cya
 minetest.register_alias("abriglass:stained_glass_light_blue", "upmod:stained_glass_light_blue")
 minetest.register_alias("abriglass:stained_glass_blue", "upmod:stained_glass_blue")
 minetest.register_alias("abriglass:stained_glass_violet", "upmod:stained_glass_violet")
+minetest.register_alias("abriglass:stained_glass_purple", "upmod:stained_glass_violet")
 minetest.register_alias("abriglass:stained_glass_magenta", "upmod:stained_glass_magenta")
 
 minetest.register_alias("xpanes:upmod_pane_white", "xpanes:glass_pane_white")
@@ -194,3 +196,22 @@ minetest.register_alias("xpanes:upmod_pane_light_blue", "xpanes:glass_pane_light
 minetest.register_alias("xpanes:upmod_pane_blue", "xpanes:glass_pane_blue")
 minetest.register_alias("xpanes:upmod_pane_violet", "xpanes:glass_pane_violet")
 minetest.register_alias("xpanes:upmod_pane_magenta", "xpanes:glass_pane_magenta")
+
+minetest.register_alias("xpanes:upmod_pane_frosted_flat", "xpanes:glass_pane_white_flat")
+minetest.register_alias("xpanes:upmod_pane_white_flat", "xpanes:glass_pane_white_flat")
+minetest.register_alias("xpanes:upmod_pane_grey_flat", "xpanes:glass_pane_grey_flat")
+minetest.register_alias("xpanes:upmod_pane_dark_grey_flat", "xpanes:glass_pane_dark_grey_flat")
+minetest.register_alias("xpanes:upmod_pane_black_flat", "xpanes:glass_pane_black_flat")
+minetest.register_alias("xpanes:upmod_pane_red_flat", "xpanes:glass_pane_red_flat")
+minetest.register_alias("xpanes:upmod_pane_pink_flat", "xpanes:glass_pane_pink_flat")
+minetest.register_alias("xpanes:upmod_pane_yellow_flat", "xpanes:glass_pane_yellow_flat")
+minetest.register_alias("xpanes:upmod_pane_orange_flat", "xpanes:glass_pane_orange_flat")
+minetest.register_alias("xpanes:upmod_pane_brown_flat", "xpanes:glass_pane_brown_flat")
+minetest.register_alias("xpanes:upmod_pane_dark_green_flat", "xpanes:glass_pane_dark_green_flat")
+minetest.register_alias("xpanes:upmod_pane_green_flat", "xpanes:glass_pane_green_flat")
+minetest.register_alias("xpanes:upmod_pane_cyan_flat", "xpanes:glass_pane_cyan_flat")
+minetest.register_alias("xpanes:upmod_pane_light_blue_flat", "xpanes:glass_pane_light_blue_flat")
+minetest.register_alias("xpanes:upmod_pane_blue_flat", "xpanes:glass_pane_blue_flat")
+minetest.register_alias("xpanes:upmod_pane_purple_flat", "xpanes:glass_pane_violet_flat")
+minetest.register_alias("xpanes:upmod_pane_violet_flat", "xpanes:glass_pane_violet_flat")
+minetest.register_alias("xpanes:upmod_pane_magenta_flat", "xpanes:glass_pane_magenta_flat")
