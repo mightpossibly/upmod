@@ -1,19 +1,21 @@
 ---- Concrete
 
-local S = minetest.get_translator("concrete")
 local dyes = dye.dyes
 
 for i = 1, #dyes do
 	local name, desc = unpack(dyes[i])
 	
 	-- Register the concrete blocks: 1 color for each dye present
-	minetest.register_node("upmod:" .. name .."_concrete", {
-		description = S(desc .. " Concrete"),
+	minetest.register_node("upmod:concrete_"..name, {
+		description = (desc .. " Concrete"),
 		tiles = {"concrete_" .. name .. ".png"},
 		is_ground_content = false,
 		groups = {cracky = 3},
 		sounds = default.node_sound_stone_defaults(),
 	})
+	
+	-- Remove/comment out this line later, after node names have been switched
+	minetest.register_alias("upmod:"..name.."_concrete", "upmod:concrete_"..name)
 	
 	-- Register the crafting recipes for the concrete blocks
 	minetest.register_craft{
@@ -24,8 +26,15 @@ for i = 1, #dyes do
 					"default:gravel", "default:gravel", "default:gravel",
 		},	
 	}
+	-- Stairs & Slabs
+	stairs.register_stair_and_slab("concrete_"..name, "upmod:concrete_"..name,
+		{cracky=2},
+		{"concrete_"..name..".png" },
+		(desc.." Concrete Stair"),
+		(desc.." Concrete Slab"),
+		default.node_sound_stone_defaults())
 	
-	-- Register moreblocks variations of the concrete blocks (if moreblocks is present)
+	--[[ Register moreblocks variations of the concrete blocks (if moreblocks is present)
 	if minetest.get_modpath("moreblocks") then
 		stairsplus:register_all("moreblocks", "upmod:concrete_" .. name, "upmod:concrete_" .. name,{
 			description = S(desc .. " Concrete"),
@@ -33,7 +42,7 @@ for i = 1, #dyes do
 			groups = {cracky = 3},
 			sounds = default.node_sound_stone_defaults(),
 		})
-	end
+	end --]]
 end
 
 -- Backwards compatibility: Replace colored_concrete with the new ones in upmod

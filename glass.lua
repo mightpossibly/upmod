@@ -70,18 +70,18 @@ local color_list = {
 	{"grey",		"Grey", 		"5A5A5A",},
 	{"dark_grey",	"Dark Grey", 	"2A2A2A",},
 	{"black",		"Black", 		"000000",},
-	{"violet",		"Violet", 		"4D276A",}, 
-	{"blue",		"Blue", 		"3E5AAD",},
-	{"cyan",		"Cyan",			"517D99",},
-	{"dark_green",	"Dark Green", 	"52803B",}, 
-	{"green",		"Green", 		"48AD45",},
-	{"yellow",		"Yellow", 		"E1E148",},
-	{"brown",		"Brown", 		"4F2425",}, 
-	{"orange",		"Orange",		"D77D42",},
-	{"red",			"Red",			"AF1B27",},
-	{"magenta",		"Magenta",		"C750D6",},
-	{"pink",		"Pink", 		"EA84AD",},
-	{"light_blue",	"Light Blue",	"40A1D6",}
+	{"violet",		"Violet", 		"4A078B",}, 
+	{"blue",		"Blue", 		"01297C",},
+	{"cyan",		"Cyan",			"015970",},
+	{"dark_green",	"Dark Green", 	"233A07",}, 
+	{"green",		"Green", 		"3E8C02",},
+	{"yellow",		"Yellow", 		"BA9101",},
+	{"brown",		"Brown", 		"401905",}, 
+	{"orange",		"Orange",		"BC5700",},
+	{"red",			"Red",			"730506",},
+	{"magenta",		"Magenta",		"951090",},
+	{"pink",		"Pink", 		"AE477A",},
+	{"light_blue",	"Light Blue",	"066EAC",}
 }
 
 
@@ -196,22 +196,3 @@ minetest.register_alias("xpanes:upmod_pane_light_blue", "xpanes:glass_pane_light
 minetest.register_alias("xpanes:upmod_pane_blue", "xpanes:glass_pane_blue")
 minetest.register_alias("xpanes:upmod_pane_violet", "xpanes:glass_pane_violet")
 minetest.register_alias("xpanes:upmod_pane_magenta", "xpanes:glass_pane_magenta")
-
-minetest.register_alias("xpanes:upmod_pane_frosted_flat", "xpanes:glass_pane_white_flat")
-minetest.register_alias("xpanes:upmod_pane_white_flat", "xpanes:glass_pane_white_flat")
-minetest.register_alias("xpanes:upmod_pane_grey_flat", "xpanes:glass_pane_grey_flat")
-minetest.register_alias("xpanes:upmod_pane_dark_grey_flat", "xpanes:glass_pane_dark_grey_flat")
-minetest.register_alias("xpanes:upmod_pane_black_flat", "xpanes:glass_pane_black_flat")
-minetest.register_alias("xpanes:upmod_pane_red_flat", "xpanes:glass_pane_red_flat")
-minetest.register_alias("xpanes:upmod_pane_pink_flat", "xpanes:glass_pane_pink_flat")
-minetest.register_alias("xpanes:upmod_pane_yellow_flat", "xpanes:glass_pane_yellow_flat")
-minetest.register_alias("xpanes:upmod_pane_orange_flat", "xpanes:glass_pane_orange_flat")
-minetest.register_alias("xpanes:upmod_pane_brown_flat", "xpanes:glass_pane_brown_flat")
-minetest.register_alias("xpanes:upmod_pane_dark_green_flat", "xpanes:glass_pane_dark_green_flat")
-minetest.register_alias("xpanes:upmod_pane_green_flat", "xpanes:glass_pane_green_flat")
-minetest.register_alias("xpanes:upmod_pane_cyan_flat", "xpanes:glass_pane_cyan_flat")
-minetest.register_alias("xpanes:upmod_pane_light_blue_flat", "xpanes:glass_pane_light_blue_flat")
-minetest.register_alias("xpanes:upmod_pane_blue_flat", "xpanes:glass_pane_blue_flat")
-minetest.register_alias("xpanes:upmod_pane_purple_flat", "xpanes:glass_pane_violet_flat")
-minetest.register_alias("xpanes:upmod_pane_violet_flat", "xpanes:glass_pane_violet_flat")
-minetest.register_alias("xpanes:upmod_pane_magenta_flat", "xpanes:glass_pane_magenta_flat")
