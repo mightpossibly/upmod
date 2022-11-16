@@ -151,21 +151,20 @@ for i in ipairs(colors) do
 	
 end
 
---[[
 -- Backwards compatibility: Replace colored_concrete with the new ones in upmod
-minetest.register_alias("colored_concrete:white", "upmod:white_concrete")
-minetest.register_alias("colored_concrete:gray", "upmod:grey_concrete")
-minetest.register_alias("colored_concrete:darkgray", "upmod:dark_grey_concrete")
-minetest.register_alias("colored_concrete:black", "upmod:black_concrete")
-minetest.register_alias("colored_concrete:red", "upmod:red_concrete")
-minetest.register_alias("colored_concrete:pink", "upmod:pink_concrete")
-minetest.register_alias("colored_concrete:yellow", "upmod:yellow_concrete")
-minetest.register_alias("colored_concrete:orange", "upmod:orange_concrete")
-minetest.register_alias("colored_concrete:brown", "upmod:brown_concrete")
-minetest.register_alias("colored_concrete:green", "upmod:dark_green_concrete")
-minetest.register_alias("colored_concrete:lightgreen", "upmod:green_concrete")
-minetest.register_alias("colored_concrete:turquoise", "upmod:cyan_concrete")
-minetest.register_alias("colored_concrete:lightblue", "upmod:light_blue_concrete")
-minetest.register_alias("colored_concrete:blue", "upmod:blue_concrete")
-minetest.register_alias("colored_concrete:violet", "upmod:violet_concrete")
-minetest.register_alias("colored_concrete:magenta", "upmod:magenta_concrete")--]]
+minetest.register_alias("colored_concrete:white", "upmod:concrete_white")
+minetest.register_alias("colored_concrete:gray", "upmod:concrete_grey")
+minetest.register_alias("colored_concrete:darkgray", "upmod:concrete_dark_grey")
+minetest.register_alias("colored_concrete:black", "upmod:concrete_black")
+minetest.register_alias("colored_concrete:red", "upmod:concrete_red")
+minetest.register_alias("colored_concrete:pink", "upmod:concrete_pink")
+minetest.register_alias("colored_concrete:yellow", "upmod:concrete_yellow")
+minetest.register_alias("colored_concrete:orange", "upmod:concrete_orange")
+minetest.register_alias("colored_concrete:brown", "upmod:concrete_brown")
+minetest.register_alias("colored_concrete:green", "upmod:concrete_dark_green")
+minetest.register_alias("colored_concrete:lightgreen", "upmod:concrete_green")
+minetest.register_alias("colored_concrete:turquoise", "upmod:concrete_cyan")
+minetest.register_alias("colored_concrete:lightblue", "upmod:concrete_light_blue")
+minetest.register_alias("colored_concrete:blue", "upmod:concrete_blue")
+minetest.register_alias("colored_concrete:violet", "upmod:concrete_violet")
+minetest.register_alias("colored_concrete:magenta", "upmod:concrete_magenta")
