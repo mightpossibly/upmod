@@ -14,20 +14,38 @@ minetest.register_node("upmod:white_lamp", {
 })
 
 -- Ice
+minetest.register_node(":default:ice", {
+	description = ("Packed Ice"),
+	tiles = {"upmod_ice.png"},
+	use_texture_alpha = "blend",
+	sunlight_propagates = true,
+	is_ground_content = true,
+	paramtype = "light",
+	drawtype = "glasslike",
+	groups = {oddly_breakable_by_hand = 3, cracky = 3, cools_lava = 1, slippery = 7},
+	sounds = default.node_sound_ice_defaults(),
+})
+
 minetest.register_node("upmod:packed_ice", {
 	description = ("Packed Ice"),
-	tiles = {"upmod_packed_ice.png"},
-	is_ground_content = false,
+	tiles = {"upmod_ice_packed.png"},
+	use_texture_alpha = "blend",
+	sunlight_propagates = true,
+	is_ground_content = true,
 	paramtype = "light",
+	drawtype = "glasslike",
 	groups = {cracky = 3, cools_lava = 1, slippery = 7},
 	sounds = default.node_sound_ice_defaults(),
 })
 
 minetest.register_node("upmod:dark_ice", {
 	description = ("Dark Ice"),
-	tiles = {"upmod_dark_ice.png"},
-	is_ground_content = false,
+	tiles = {"upmod_ice_dark.png"},
+	use_texture_alpha = "blend",
+	sunlight_propagates = true,
+	is_ground_content = true,
 	paramtype = "light",
+	drawtype = "glasslike",
 	groups = {cracky = 3, cools_lava = 1, slippery = 16},
 	sounds = default.node_sound_ice_defaults(),
 })
