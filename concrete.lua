@@ -44,7 +44,7 @@ for i in ipairs(colors) do
 	-- Register Concrete Blocks
 	minetest.register_node("upmod:"..name.."_concrete", {
 		description = (desc .. " Concrete"),
-		tiles = {"concrete_" .. name .. ".png"},
+		tiles = {"concrete_".. name ..".png"},
 		is_ground_content = false,
 		groups = {cracky = 3},
 		sounds = default.node_sound_stone_defaults(),
