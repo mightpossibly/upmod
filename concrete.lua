@@ -30,7 +30,7 @@ for i in ipairs(colors) do
 	local color = colors[i][3]
 	
 		-- Register Concrete Powder
-	minetest.register_node("upmod:concrete_powder_"..name, {
+	minetest.register_node("upmod:"..name.."_concrete_powder", {
 		description = (desc .. " Concrete Powder"),
 		tiles = {"concrete_powder.png^[colorize:#"..color..":135"},
 		is_ground_content = false,
@@ -38,19 +38,25 @@ for i in ipairs(colors) do
         sounds = default.node_sound_sand_defaults(),
 	})
 	
+	minetest.register_alias("upmod:concrete_powder_"..name, "upmod:"..name.."_concrete_powder")
+
+	
 	-- Register Concrete Blocks
-	minetest.register_node("upmod:concrete_"..name, {
+	minetest.register_node("upmod:"..name.."_concrete", {
 		description = (desc .. " Concrete"),
 		tiles = {"concrete_" .. name .. ".png"},
 		is_ground_content = false,
 		groups = {cracky = 3},
 		sounds = default.node_sound_stone_defaults(),
 	})
+
+	--minetest.register_alias("upmod:"..name.."_concrete", "upmod:concrete_"..name)
+	minetest.register_alias("upmod:concrete_"..name, "upmod:"..name.."_concrete")
 	
 	-- Register crafting recipes for concrete powder
 	minetest.register_craft{
 		type = "shapeless",
-		output = "upmod:concrete_powder_".. name .." 8",
+		output = "upmod:"..name.."_concrete_powder 8",
 		recipe = {"group:dye,color_" .. name, "group:sand", "group:sand",
 					"group:sand", "group:sand", "default:gravel",
 					"default:gravel", "default:gravel", "default:gravel",
@@ -77,7 +83,7 @@ for i in ipairs(colors) do
 	
 	-- Remove/comment out this line later, after node names have been switched
 	minetest.register_alias("upmod:"..name.."_concrete", "upmod:concrete_"..name)
-	
+	minetest.register_alias("upmod:"..name.."_concrete", "upmod:concrete_"..name)
 	--]]
 end
 

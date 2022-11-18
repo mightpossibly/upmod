@@ -85,16 +85,14 @@ local color_list = {
 }
 
 
-
 -- Register Stained Glass Blocks
-
 for i in ipairs(color_list) do
 	local name = color_list[i][1]
 	local description = color_list[i][2]
 	local colour = color_list[i][3]
 
-	minetest.register_node("upmod:stained_glass_"..name, {
-		description = "Stained "..description.." Glass",
+	minetest.register_node("upmod:"..name.."_stained_glass", {
+		description = description.." Stained Glass",
 		tiles = {"upmod_glass_stained.png^[colorize:#"..colour..":122"},
 		groups = {cracky = 3, oddly_breakable_by_hand = 3},
 		use_texture_alpha = "blend",
@@ -104,9 +102,13 @@ for i in ipairs(color_list) do
 		paramtype = "light",
 		sounds = default.node_sound_glass_defaults(),
 	})
+	
+
+	minetest.register_alias("upmod:stained_glass_"..name, "upmod:"..name.."_stained_glass")
+
 
 	minetest.register_craft({
-		output = "upmod:stained_glass_"..name.." 8",
+		output = "upmod:"..name.."_stained _glass 8",
 		recipe = {
 			{"default:glass", "default:glass", "default:glass" },
 			{"default:glass", "dye:"..name, "default:glass" },
@@ -114,6 +116,8 @@ for i in ipairs(color_list) do
 		}
 	})
 end
+
+
 
 -- Register Glass Panes
 for i in ipairs(color_list) do
@@ -123,7 +127,7 @@ for i in ipairs(color_list) do
 	local tex = "upmod_glass_pane.png^[colorize:#"..colour..":122"
 	local texedge = "upmod_glass_pane_edge.png^[colorize:#"..colour..":122"
 
-	register_pane("glass_pane_"..name, {
+	register_pane(name.."_glass_pane", {
 		description = description.." Glass Pane",
 		textures = {tex, texedge, texedge},
 		groups = {cracky = 3, oddly_breakable_by_hand = 3},
@@ -137,6 +141,9 @@ for i in ipairs(color_list) do
 			{"","dye:"..name,"",},
 		}
 	})
+	
+	minetest.register_alias("xpanes:glass_pane_"..name.."_flat", "xpanes:"..name.."_glass_pane_flat")
+	minetest.register_alias("xpanes:glass_pane_"..name, "xpanes:"..name.."_glass_pane_flat")
 end
 
 --[[

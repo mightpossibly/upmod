@@ -26,7 +26,7 @@ minetest.register_node(":default:ice", {
 	sounds = default.node_sound_ice_defaults(),
 })
 
-minetest.register_node("upmod:ice_packed", {
+minetest.register_node("upmod:packed_ice", {
 	description = ("Packed Ice"),
 	tiles = {"upmod_ice_packed.png"},
 	use_texture_alpha = "blend",
@@ -37,9 +37,9 @@ minetest.register_node("upmod:ice_packed", {
 	groups = {cracky = 3, cools_lava = 1, slippery = 7},
 	sounds = default.node_sound_ice_defaults(),
 })
-minetest.register_alias("upmod:packed_ice", "upmod:ice_packed")
+minetest.register_alias("upmod:ice_packed", "upmod:packed_ice")
 
-minetest.register_node("upmod:ice_black", {
+minetest.register_node("upmod:black_ice", {
 	description = ("Black Ice"),
 	tiles = {"upmod_ice_black.png"},
 	use_texture_alpha = "blend",
@@ -51,7 +51,9 @@ minetest.register_node("upmod:ice_black", {
 	sounds = default.node_sound_ice_defaults(),
 })
 
-minetest.register_alias("upmod:dark_ice", "upmod:ice_black")
+minetest.register_alias("upmod:dark_ice", "upmod:black_ice")
+minetest.register_alias("upmod:ice_black", "upmod:black_ice")
+
 
 minetest.register_craft({
     type = "shapeless",
