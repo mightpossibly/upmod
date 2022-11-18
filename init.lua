@@ -10,5 +10,11 @@ dofile(modpath .. "/sea_lanterns.lua")
 -- Misc. aliases
 minetest.register_alias("upmod:sea_lantern", "xocean:sea_lantern")
 
+
+	minetest.override_item("", {
+		range = 5,
+	})
+
 -- "Upmod loaded" message
 print("[upmod] loaded")
+
