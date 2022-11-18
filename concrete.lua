@@ -91,54 +91,54 @@ end
 		-- Add water mixing
 	-- Make Concrete Powder react with Water to make Concrete
 default.mix_concrete = function(pos, node)
-		if node.name == "upmod:concrete_powder_white" then
-			minetest.set_node(pos, {name = "upmod:concrete_white"})
+		if node.name == "upmod:white_concrete_powder" then
+			minetest.set_node(pos, {name = "upmod:white_concrete"})
 		end
-		if node.name == "upmod:concrete_powder_grey" then
-			minetest.set_node(pos, {name = "upmod:concrete_grey"})
+		if node.name == "upmod:grey_concrete_powder" then
+			minetest.set_node(pos, {name = "upmod:grey_concrete"})
 		end
-		if node.name == "upmod:concrete_powder_dark_grey" then
-			minetest.set_node(pos, {name = "upmod:concrete_dark_grey"})
+		if node.name == "upmod:dark_grey_concrete_powder" then
+			minetest.set_node(pos, {name = "upmod:dark_grey_concrete"})
 		end
-		if node.name == "upmod:concrete_powder_black" then
-			minetest.set_node(pos, {name = "upmod:concrete_black"})
+		if node.name == "upmod:black_concrete_powder" then
+			minetest.set_node(pos, {name = "upmod:black_concrete"})
 		end
-		if node.name == "upmod:concrete_powder_red" then
-			minetest.set_node(pos, {name = "upmod:concrete_red"})
+		if node.name == "upmod:red_concrete_powder" then
+			minetest.set_node(pos, {name = "upmod:red_concrete"})
 		end
-		if node.name == "upmod:concrete_powder_pink" then
-			minetest.set_node(pos, {name = "upmod:concrete_pink"})
+		if node.name == "upmod:pink_concrete_powder" then
+			minetest.set_node(pos, {name = "upmod:pink_concrete"})
 		end
-		if node.name == "upmod:concrete_powder_violet" then
-			minetest.set_node(pos, {name = "upmod:concrete_violet"})
+		if node.name == "upmod:violet_concrete_powder" then
+			minetest.set_node(pos, {name = "upmod:violet_concrete"})
 		end
-		if node.name == "upmod:concrete_powder_blue" then
-			minetest.set_node(pos, {name = "upmod:concrete_blue"})
+		if node.name == "upmod:blue_concrete_powder" then
+			minetest.set_node(pos, {name = "upmod:blue_concrete"})
 		end
-		if node.name == "upmod:concrete_powder_cyan" then
-			minetest.set_node(pos, {name = "upmod:concrete_cyan"})
+		if node.name == "upmod:cyan_concrete_powder" then
+			minetest.set_node(pos, {name = "upmod:cyan_concrete"})
 		end
-		if node.name == "upmod:concrete_powder_dark_green" then
-			minetest.set_node(pos, {name = "upmod:concrete_dark_green"})
+		if node.name == "upmod:dark_green_concrete_powder" then
+			minetest.set_node(pos, {name = "upmod:dark_green_concrete"})
 		end
-		if node.name == "upmod:concrete_powder_brown" then
-			minetest.set_node(pos, {name = "upmod:concrete_brown"})
+		if node.name == "upmod:brown_concrete_powder" then
+			minetest.set_node(pos, {name = "upmod:brown_concrete"})
 		end
-		if node.name == "upmod:concrete_powder_orange" then
-			minetest.set_node(pos, {name = "upmod:concrete_orange"})
+		if node.name == "upmod:orange_concrete_powder" then
+			minetest.set_node(pos, {name = "upmod:orange_concrete"})
 		end
-		if node.name == "upmod:concrete_powder_magenta" then
-			minetest.set_node(pos, {name = "upmod:concrete_magenta"})
+		if node.name == "upmod:magenta_concrete_powder" then
+			minetest.set_node(pos, {name = "upmod:magenta_concrete"})
 		end
-	if node.name == "upmod:concrete_powder_light_blue" then
-		minetest.set_node(pos, {name = "upmod:concrete_light_blue"})
-	end
-	if node.name == "upmod:concrete_powder_yellow" then
-		minetest.set_node(pos, {name = "upmod:concrete_yellow"})
-	end
-	if node.name == "upmod:concrete_powder_green" then
-		minetest.set_node(pos, {name = "upmod:concrete_green"})
-	end
+		if node.name == "upmod:light_blue_concrete_powder" then
+			minetest.set_node(pos, {name = "upmod:light_blue_concrete"})
+		end
+		if node.name == "upmod:yellow_concrete_powder" then
+			minetest.set_node(pos, {name = "upmod:yellow_concrete"})
+		end
+		if node.name == "upmod:green_concrete_powder" then
+			minetest.set_node(pos, {name = "upmod:green_concrete"})
+		end
 end
 
 for i in ipairs(colors) do
@@ -158,19 +158,19 @@ for i in ipairs(colors) do
 end
 
 -- Backwards compatibility: Replace colored_concrete with the new ones in upmod
-minetest.register_alias("colored_concrete:white", "upmod:concrete_white")
-minetest.register_alias("colored_concrete:gray", "upmod:concrete_grey")
-minetest.register_alias("colored_concrete:darkgray", "upmod:concrete_dark_grey")
-minetest.register_alias("colored_concrete:black", "upmod:concrete_black")
-minetest.register_alias("colored_concrete:red", "upmod:concrete_red")
-minetest.register_alias("colored_concrete:pink", "upmod:concrete_pink")
-minetest.register_alias("colored_concrete:yellow", "upmod:concrete_yellow")
-minetest.register_alias("colored_concrete:orange", "upmod:concrete_orange")
-minetest.register_alias("colored_concrete:brown", "upmod:concrete_brown")
-minetest.register_alias("colored_concrete:green", "upmod:concrete_dark_green")
-minetest.register_alias("colored_concrete:lightgreen", "upmod:concrete_green")
-minetest.register_alias("colored_concrete:turquoise", "upmod:concrete_cyan")
-minetest.register_alias("colored_concrete:lightblue", "upmod:concrete_light_blue")
-minetest.register_alias("colored_concrete:blue", "upmod:concrete_blue")
-minetest.register_alias("colored_concrete:violet", "upmod:concrete_violet")
-minetest.register_alias("colored_concrete:magenta", "upmod:concrete_magenta")
+minetest.register_alias("colored_concrete:white", "upmod:white_concrete")
+minetest.register_alias("colored_concrete:gray", "upmod:grey_concrete")
+minetest.register_alias("colored_concrete:darkgray", "upmod:dark_grey_concrete")
+minetest.register_alias("colored_concrete:black", "upmod:black_concrete")
+minetest.register_alias("colored_concrete:red", "upmod:red_concrete")
+minetest.register_alias("colored_concrete:pink", "upmod:pink_concrete")
+minetest.register_alias("colored_concrete:yellow", "upmod:yellow_concrete")
+minetest.register_alias("colored_concrete:orange", "upmod:orange_concrete")
+minetest.register_alias("colored_concrete:brown", "upmod:brown_concrete")
+minetest.register_alias("colored_concrete:green", "upmod:dark_green_concrete")
+minetest.register_alias("colored_concrete:lightgreen", "upmod:green_concrete")
+minetest.register_alias("colored_concrete:turquoise", "upmod:cyan_concrete")
+minetest.register_alias("colored_concrete:lightblue", "upmod:light_blue_concrete")
+minetest.register_alias("colored_concrete:blue", "upmod:blue_concrete")
+minetest.register_alias("colored_concrete:violet", "upmod:violet_concrete")
+minetest.register_alias("colored_concrete:magenta", "upmod:magenta_concrete")
