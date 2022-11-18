@@ -143,7 +143,9 @@ for i in ipairs(color_list) do
 	})
 	
 	minetest.register_alias("xpanes:glass_pane_"..name.."_flat", "xpanes:"..name.."_glass_pane_flat")
+	minetest.register_alias("xpanes:upmod_pane_"..name.."_flat", "xpanes:"..name.."_glass_pane_flat")
 	minetest.register_alias("xpanes:glass_pane_"..name, "xpanes:"..name.."_glass_pane_flat")
+	
 end
 
 --[[
@@ -186,7 +188,7 @@ minetest.register_alias("abriglass:stained_glass_blue", "upmod:stained_glass_blu
 minetest.register_alias("abriglass:stained_glass_violet", "upmod:stained_glass_violet")
 minetest.register_alias("abriglass:stained_glass_purple", "upmod:stained_glass_violet")
 minetest.register_alias("abriglass:stained_glass_magenta", "upmod:stained_glass_magenta")
-
+--[[
 minetest.register_alias("xpanes:upmod_pane_white", "xpanes:glass_pane_white")
 minetest.register_alias("xpanes:upmod_pane_grey", "xpanes:glass_pane_grey")
 minetest.register_alias("xpanes:upmod_pane_dark_grey", "xpanes:glass_pane_dark_grey")
@@ -202,4 +204,4 @@ minetest.register_alias("xpanes:upmod_pane_cyan", "xpanes:glass_pane_cyan")
 minetest.register_alias("xpanes:upmod_pane_light_blue", "xpanes:glass_pane_light_blue")
 minetest.register_alias("xpanes:upmod_pane_blue", "xpanes:glass_pane_blue")
 minetest.register_alias("xpanes:upmod_pane_violet", "xpanes:glass_pane_violet")
-minetest.register_alias("xpanes:upmod_pane_magenta", "xpanes:glass_pane_magenta")
+minetest.register_alias("xpanes:upmod_pane_magenta", "xpanes:glass_pane_magenta")--]]
