@@ -15,7 +15,7 @@ minetest.register_node("upmod:white_lamp", {
 
 -- Ice
 minetest.register_node(":default:ice", {
-	description = ("Packed Ice"),
+	description = ("Ice"),
 	tiles = {"upmod_ice.png"},
 	use_texture_alpha = "blend",
 	sunlight_propagates = true,
