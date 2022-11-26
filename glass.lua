@@ -108,7 +108,7 @@ for i in ipairs(color_list) do
 
 
 	minetest.register_craft({
-		output = "upmod:"..name.."_stained _glass 8",
+		output = "upmod:"..name.."_stained_glass 8",
 		recipe = {
 			{"default:glass", "default:glass", "default:glass" },
 			{"default:glass", "dye:"..name, "default:glass" },
