@@ -2,7 +2,6 @@
 minetest.register_node("upmod:white_lamp", {
 	description = "White Lamp",
 	paramtype2 = "facedir",
-	use_texture_alpha = true,
 	place_param2 = 0,
 	tiles = {"upmod_white_lamp.png"},
 	is_ground_content = false,
@@ -104,6 +103,7 @@ minetest.register_node("upmod:iron_bar_floor", {
 		"blank.png"
 	},
 	drawtype = "nodebox",
+	use_texture_alpha = "clip",
 	paramtype = "light",
 	sunlight_propagates = true,
 	is_ground_content = true,
