@@ -205,10 +205,10 @@ minetest.register_node("upmod:selector_demo", {
 
 
 beds.register_bed("upmod:bed_rainbow", {
-	description = ("Simple Rainbow Bed"),
-	inventory_image = "beds_bed_rainbow.png",
-	wield_image = "beds_bed_rainbow.png",
-	tiles = {"beds_simple_bed_rainbow.png"},
+	description = ("Rainbow Bed"),
+	inventory_image = "upmod_bed_inv_rainbow.png",
+	wield_image = "upmod_bed_rainbow.png",
+	tiles = {"upmod_bed_rainbow.png"},
 	mesh = "beds_simple_bed.obj",
 	selectionbox = {-0.5, -0.5, -0.5, 0.5, 0.06, 1.5},
 	collisionbox = {-0.5, -0.5, -0.5, 0.5, 0.06, 1.5},
@@ -219,10 +219,10 @@ beds.register_bed("upmod:bed_rainbow", {
 })
 
 beds.register_bed("upmod:bed_funkysunset", {
-	description = ("Simple Funky Sunset Bed"),
-	inventory_image = "beds_bed_funkysunset.png",
-	wield_image = "beds_bed_funkysunset.png",
-	tiles = {"beds_simple_bed_funkysunset.png"},
+	description = ("Funky Sunset Bed"),
+	inventory_image = "upmod_bed_inv_funkysunset.png",
+	wield_image = "upmod_bed_inv_funkysunset.png",
+	tiles = {"upmod_bed_funkysunset.png"},
 	mesh = "beds_simple_bed.obj",
 	selectionbox = {-0.5, -0.5, -0.5, 0.5, 0.06, 1.5},
 	collisionbox = {-0.5, -0.5, -0.5, 0.5, 0.06, 1.5},
@@ -233,10 +233,10 @@ beds.register_bed("upmod:bed_funkysunset", {
 })
 
 beds.register_bed("upmod:bed_black", {
-	description = ("Simple Black Bed"),
-	inventory_image = "beds_bed_black.png",
-	wield_image = "beds_bed_black.png",
-	tiles = {"beds_simple_bed_black.png"},
+	description = ("Black Bed"),
+	inventory_image = "upmod_bed_inv_black.png",
+	wield_image = "upmod_bed_inv_black.png",
+	tiles = {"upmod_bed_black.png"},
 	mesh = "beds_simple_bed.obj",
 	selectionbox = {-0.5, -0.5, -0.5, 0.5, 0.06, 1.5},
 	collisionbox = {-0.5, -0.5, -0.5, 0.5, 0.06, 1.5},

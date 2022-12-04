@@ -8,7 +8,7 @@ for i = 1, #dyes do
 	-- Register the sea lanterns: 1 color for each dye present
 	minetest.register_node("upmod:"..name.."_sea_lantern", {
 		description = (desc .. " Sea Lantern"),
-		tiles = {"sea_lantern_" .. name .. ".png"},
+		tiles = {"upmod_sea_lantern_" .. name .. ".png"},
 		is_ground_content = false,
 		groups = {cracky = 3},
 		sunlight_propagates = true,

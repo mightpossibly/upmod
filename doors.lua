@@ -30,10 +30,10 @@ for i in ipairs(wood_types) do
 
 	doors.register("upmod:door_"..name, {
 		tiles = {
-			{name = "door_"..name..".png", backface_culling = true}
+			{name = "upmod_door_"..name..".png", backface_culling = true}
 		},
 		description = (desc.." Door"),
-		inventory_image = "door_item_"..name..".png",
+		inventory_image = "upmod_door_item_"..name..".png",
 		groups = {snappy = 1, choppy = 2, oddly_breakable_by_hand = 2, flammable = 2},
 		sound_open = "doors_glass_door_open",
 		sound_close = "doors_glass_door_close",
@@ -92,10 +92,10 @@ doors.register(":ethereal:door_sakura", {
 
 doors.register("upmod:door_bamboo", {
 		tiles = {
-			{name = "door_bamboo.png", backface_culling = true}
+			{name = "upmod_door_bamboo.png", backface_culling = true}
 		},
 		description = ("Bamboo Door"),
-		inventory_image = "door_item_bamboo.png",
+		inventory_image = "upmod_door_item_bamboo.png",
 		groups = {snappy = 1, choppy = 2, oddly_breakable_by_hand = 2, flammable = 2},
 		sound_open = "doors_glass_door_open",
 		sound_close = "doors_glass_door_close",

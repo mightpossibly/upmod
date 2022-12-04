@@ -32,7 +32,7 @@ for i in ipairs(colors) do
 		-- Register Concrete Powder
 	minetest.register_node("upmod:"..name.."_concrete_powder", {
 		description = (desc .. " Concrete Powder"),
-		tiles = {"concrete_powder.png^[colorize:#"..color..":135"},
+		tiles = {"upmod_concrete_powder.png^[colorize:#"..color..":135"},
 		is_ground_content = false,
 		groups = {crumbly = 3, falling_node = 1, sand = 1},
         sounds = default.node_sound_sand_defaults(),
@@ -44,11 +44,42 @@ for i in ipairs(colors) do
 	-- Register Concrete Blocks
 	minetest.register_node("upmod:"..name.."_concrete", {
 		description = (desc .. " Concrete"),
-		tiles = {"concrete_"..name..".png"},
+		tiles = {"upmod_concrete_"..name..".png"},
 		is_ground_content = false,
 		groups = {cracky = 3},
 		sounds = default.node_sound_stone_defaults(),
 	})
+
+	-- Add stair- and slab variations; Register moreblocks variations of the concrete blocks (if moreblocks is present)
+	stairsplus:register_all("moreblocks", "upmod_"..name.."_concrete", "upmod:"..name.."_concrete",{
+			description = (desc .. " Concrete"),
+			tiles = {"upmod_concrete_" .. name .. ".png"},
+			groups = {cracky = 3},
+			sounds = default.node_sound_stone_defaults(),
+	})
+
+	minetest.register_alias("stairs:stair_outer_concrete_"..name, "moreblocks:stair_upmod_"..name.."_concrete_outer")
+	minetest.register_alias("stairs:stair_inner_concrete_"..name, "moreblocks:stair_upmod_"..name.."_concrete_inner")
+	minetest.register_alias("stairs:stair_concrete_"..name, "moreblocks:stair_upmod_"..name.."_concrete")
+	minetest.register_alias("stairs:slab_concrete_"..name, "moreblocks:slab_upmod_"..name.."_concrete")
+
+--[[
+
+stairs:stair_outer_concrete_blue > moreblocks:stair_upmod_blue_concrete_outer
+stairs:stair_inner_concrete_blue > moreblocks:stair_upmod_blue_concrete_inner
+stairs:stair_concrete_blue > moreblocks:stair_upmod_blue_concrete
+stairs:slab_concrete_blue > moreblocks:slab_upmod_blue_concrete
+
+
+stairsplus:register_all("bakedclay", "baked_clay_" .. clay[1],
+				"bakedclay:" .. clay[1], {
+			description = clay[2] .. " Baked Clay",
+			tiles = {"baked_clay_" .. clay[1] .. ".png"},
+			groups = {cracky = 3},
+			sounds = default.node_sound_stone_defaults()
+		})
+		
+		--]]
 
 	--minetest.register_alias("upmod:"..name.."_concrete", "upmod:concrete_"..name)
 	minetest.register_alias("upmod:concrete_"..name, "upmod:"..name.."_concrete")
@@ -63,23 +94,16 @@ for i in ipairs(colors) do
 		},	
 	}
 		
-	-- Add stair- and slab variations
+
+
+	--[[	
+	
 	stairs.register_stair_and_slab("concrete_"..name, "upmod:concrete_"..name,
 		{cracky=2},
-		{"concrete_"..name..".png" },
+		{"upmod_concrete_"..name..".png" },
 		(desc.." Concrete Stair"),
 		(desc.." Concrete Slab"),
 		default.node_sound_stone_defaults())
-	
-	--[[ Register moreblocks variations of the concrete blocks (if moreblocks is present)
-	if minetest.get_modpath("moreblocks") then
-		stairsplus:register_all("moreblocks", "upmod:concrete_" .. name, "upmod:concrete_" .. name,{
-			description = S(desc .. " Concrete"),
-			tiles = {"concrete_" .. name .. ".png"},
-			groups = {cracky = 3},
-			sounds = default.node_sound_stone_defaults(),
-		})
-	end 
 	
 	-- Remove/comment out this line later, after node names have been switched
 	minetest.register_alias("upmod:"..name.."_concrete", "upmod:concrete_"..name)
