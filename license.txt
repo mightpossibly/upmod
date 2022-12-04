@@ -1,17 +1,17 @@
-
-Textures:
-CC BY-SA 4.0 (https://creativecommons.org/licenses/by-sa/4.0/)
-Attribution: mightpossibly
-
 Code:
 License: MIT (https://opensource.org/licenses/MIT)
 By mightpossibly
 
-Code found in panes.lua is a fork of mod "abriglass" By Shara RedCat (https://github.com/Ezhh/abripanes)
-
+Glass pane code found in glass.lua is somewhat borrowed from "abripanes" By Shara RedCat (https://github.com/Ezhh/abripanes). Original license: MIT 
 Registry code adapted from xpanes mod in minetest_game (https://github.com/minetest/minetest_game/tree/master/mods/xpanes)
 
+Textures:
+CC BY-SA 4.0 (https://creativecommons.org/licenses/by-sa/4.0/)
+Attribution: mightpossibly, with the following exceptions:
+- Bed textures: <name>
 
+- upmod_door_bamboo.png and upmod_door_item_bamboo.png: Are remixes of ethereal_sakura_door.png
+Original License and Author(s): The MIT License (MIT): Copyright (c) 2016 TenPlus1
 
 ---
 

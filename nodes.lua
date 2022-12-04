@@ -66,7 +66,7 @@ minetest.register_craft({
 
 minetest.register_craft({
     type = "shapeless",
-    output = "upmod:dark_ice",
+    output = "upmod:black_ice",
     recipe = {
         "upmod:packed_ice","upmod:packed_ice","upmod:packed_ice",
         "upmod:packed_ice","upmod:packed_ice","upmod:packed_ice",
@@ -86,7 +86,7 @@ minetest.register_craft({
     type = "shapeless",
     output = "upmod:packed_ice 9",
     recipe = {
-	"upmod:dark_ice",
+	"upmod:black_ice",
     },
 })
 
