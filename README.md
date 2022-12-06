@@ -8,6 +8,13 @@ Feature list:
 
 Licenses and Attribution 
 -----------------------
-Code for this mod is released under MIT (https://opensource.org/licenses/MIT).
-Code found in panes.lua is a fork of "abriglass" By Shara RedCat (https://github.com/Ezhh/abripanes)
-Textures for this mod are released under CC BY-SA 4.0 (https://creativecommons.org/licenses/by-sa/4.0/), attribution: mightpossibly.
+License: MIT (https://opensource.org/licenses/MIT)
+Code by mightpossibly
+
+Glass pane code found in glass.lua is somewhat borrowed from "abripanes" By Shara RedCat (https://github.com/Ezhh/abripanes). Original license: MIT Registry code adapted from xpanes mod in minetest_game (https://github.com/minetest/minetest_game/tree/master/mods/xpanes)
+
+Textures License: CC BY-SA 4.0 (https://creativecommons.org/licenses/by-sa/4.0/)
+Attribution: 
+- **mightpossibly**, with the following exceptions:
+- Rainbow bed texture and black bed texture: **Mitzi Azalea**
+- Funky Sunset Bed texture: **Sovoccor**
