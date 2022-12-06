@@ -178,30 +178,6 @@ minetest.register_craft({
 })
 
 
-minetest.register_node("upmod:selector_demo", {
-	description = "Selector (demo node)",
-	paramtype2 = "facedir",
-	tiles = {
-		"atm_top.png", "atm_top.png",
-		"atm_side.png", "atm_side.png",
-		"atm_side.png",
-			{
-			image = "upmod_selector.png",
-			backface_culling = false,
-			animation = {
-				type = "vertical_frames",
-				aspect_w = 16,
-				aspect_h = 16,
-				length = 1.5
-			},
-		}
-	},
-	is_ground_content = false,
-	groups = {cracky=2, bank_equipment = 3},
-	legacy_facedir_simple = true,
-	is_ground_content = false,
-	sounds = default.node_sound_stone_defaults(),
-})
 
 
 beds.register_bed("upmod:bed_rainbow", {
@@ -246,3 +222,55 @@ beds.register_bed("upmod:bed_black", {
 	}
 })
 
+
+
+minetest.register_node("upmod:selector_demo", {
+	description = "Selector (demo node)",
+	paramtype2 = "facedir",
+	tiles = {
+		"atm_top.png", "atm_top.png",
+		"atm_side.png", "atm_side.png",
+		"atm_side.png",
+			{
+			image = "upmod_selector.png",
+			backface_culling = false,
+			animation = {
+				type = "vertical_frames",
+				aspect_w = 16,
+				aspect_h = 16,
+				length = 1.5
+			},
+		}
+	},
+	is_ground_content = false,
+	groups = {cracky=2, bank_equipment = 3},
+	legacy_facedir_simple = true,
+	is_ground_content = false,
+	sounds = default.node_sound_stone_defaults(),
+})
+
+
+minetest.register_node("upmod:shop_demo", {
+	description = "Server Shop (demo node)",
+	paramtype2 = "facedir",
+	tiles = {
+		"atm_top.png", "atm_top.png",
+		"atm_side.png", "atm_side.png",
+		"atm_side.png",
+			{
+			image = "uplift_econ_server_shop.png",
+			backface_culling = false,
+			animation = {
+				type = "vertical_frames",
+				aspect_w = 16,
+				aspect_h = 16,
+				length = 1.5
+			},
+		}
+	},
+	is_ground_content = false,
+	groups = {cracky=2, bank_equipment = 3},
+	legacy_facedir_simple = true,
+	is_ground_content = false,
+	sounds = default.node_sound_stone_defaults(),
+})
