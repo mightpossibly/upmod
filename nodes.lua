@@ -25,6 +25,49 @@ minetest.register_node(":default:ice", {
 	sounds = default.node_sound_ice_defaults(),
 })
 
+minetest.register_node(":farming:hemp_block", {
+	description = ("Hemp Block"),
+	tiles = {"farming_hemp_block_top.png", "farming_hemp_block_top.png",
+		"farming_hemp_block.png"},
+	paramtype2 = "facedir",
+	is_ground_content = false,
+	groups = {snappy = 3, oddly_breakable_by_hand = 3, flammable = 2},
+	sounds = default.node_sound_leaves_defaults(),
+
+	on_place = minetest.rotate_node
+})
+
+minetest.register_craft({
+    type = "fuel",
+    recipe = "farming:hemp_block",
+    burntime = 30,
+	})
+
+minetest.register_craft({
+    type = "shapeless",
+    output = "farming:hemp_fibre 9",
+    recipe = {
+	"farming:hemp_block",
+    },
+})
+
+minetest.register_node("upmod:hempcrete_brick", {
+	description = "Hempcrete Brick",
+	tiles = {"upmod_hemp_brick.png"},
+	is_ground_content = false,
+	groups = {cracky = 1},
+})
+
+minetest.register_craft({
+    type = "shaped",
+    output = "upmod:hempcrete_brick",
+    recipe = {
+        {"farming:hemp_block","farming:hemp_block",""},
+        {"farming:hemp_block","farming:hemp_block",""},
+		{"","",""},
+    }
+})
+
 minetest.register_node("upmod:packed_ice", {
 	description = ("Packed Ice"),
 	tiles = {"upmod_ice_packed.png"},
