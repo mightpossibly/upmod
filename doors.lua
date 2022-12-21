@@ -1,5 +1,61 @@
 -- Wood types that already have doors; default:wood and ethereal:sakura_wood
 
+local function meseconify_door(name)
+	if minetest.registered_items[name .. "_b_1"] then
+		-- old style double-node doors
+		local function toggle_state1 (pos)
+			on_rightclick(pos, 1, name.."_t_1", name.."_b_2", name.."_t_2", {1,2,3,0})
+		end
+
+		local function toggle_state2 (pos)
+			on_rightclick(pos, 1, name.."_t_2", name.."_b_1", name.."_t_1", {3,0,1,2})
+		end
+
+		minetest.override_item(name.."_b_1", {
+			mesecons = {effector = {
+				action_on = toggle_state1,
+				action_off = toggle_state1,
+				rules = mesecon.rules.pplate
+			}}
+		})
+
+		minetest.override_item(name.."_b_2", {
+			mesecons = {effector = {
+				action_on = toggle_state2,
+				action_off = toggle_state2,
+				rules = mesecon.rules.pplate
+			}}
+		})
+	elseif minetest.registered_items[name .. "_a"] then
+		-- new style mesh node based doors
+		local override = {
+			mesecons = {effector = {
+				action_on = function(pos)
+					local door = doors.get(pos)
+					if door then
+						door:open()
+					end
+				end,
+				action_off = function(pos)
+					local door = doors.get(pos)
+					if door then
+						door:close()
+					end
+				end,
+				rules = mesecon.rules.pplate
+			}}
+		}
+		minetest.override_item(name .. "_a", override)
+		minetest.override_item(name .. "_b", override)
+		if minetest.registered_items[name .. "_c"] then
+			minetest.override_item(name .. "_c", override)
+			minetest.override_item(name .. "_d", override)
+		end
+	end
+end
+
+
+
 local wood_types = {
 	{"Jungle Tree",	"default:junglewood", 			"junglewood",},
 	{"Pine",		"default:pine_wood", 			"pine",},
@@ -22,6 +78,9 @@ local wood_types = {
 	{"Frost Tree",	"ethereal:frost_wood", 			"frost",},
 	{"Healing Tree","ethereal:yellow_wood", 		"yellow",}
 }
+
+
+
 
 for i in ipairs(wood_types) do
 	local desc = wood_types[i][1]
@@ -52,6 +111,8 @@ for i in ipairs(wood_types) do
 	minetest.register_alias("upmod:door_jungle_a", "upmod:door_junglewood_a")
 	minetest.register_alias("upmod:door_jungle_b", "upmod:door_junglewood_b")
 	
+	meseconify_door("upmod:door_"..name)
+	
 	doors.register_trapdoor("upmod:trapdoor_"..name, {
 		tiles = {
 			{name = "upmod:trapdoor_"..name..".png", backface_culling = true}
@@ -67,6 +128,8 @@ for i in ipairs(wood_types) do
 		sound_open = "doors_glass_door_open",
 		sound_close = "doors_glass_door_close",
 	})
+	
+	meseconify_door("upmod:trapdoor_"..name)
 end
 
 
@@ -87,6 +150,8 @@ doors.register(":ethereal:door_sakura", {
 			{"ethereal:sakura_wood", "ethereal:sakura_wood"}
 		}
 	})
+	
+meseconify_door("ethereal:door_sakura")
 
 -- Add Bamboo Door (paper door)
 
@@ -105,6 +170,8 @@ doors.register("upmod:door_bamboo", {
 			{"ethereal:bamboo_block", "ethereal:bamboo_block"}
 		}
 	})
+
+meseconify_door("upmod:door_bamboo")
 	
 doors.register_trapdoor("upmod:trapdoor_bamboo", {
 		tiles = {
@@ -127,6 +194,8 @@ doors.register_trapdoor("upmod:trapdoor_bamboo", {
 		}
 	})
 	
+meseconify_door("upmod:trapdoor_bamboo")
+	
 	doors.register_trapdoor("upmod:trapdoor_sakura", {
 		tiles = {
 			{name = "upmod_trapdoor_sakura.png", backface_culling = true}
@@ -147,3 +216,34 @@ doors.register_trapdoor("upmod:trapdoor_bamboo", {
 			{"ethereal:yellow_wood", "group:stick"}
 		}
 	})
+
+--Mesecon compatibility for trapdoors
+local override = {
+		mesecons = {effector = {
+			action_on = function(pos)
+				local door = doors.get(pos)
+				if door then
+					door:open()
+				end
+			end,
+			action_off = function(pos)
+				local door = doors.get(pos)
+				if door then
+					door:close()
+				end
+			end,
+		}},
+	}
+
+
+for i in ipairs(wood_types) do
+	local name = wood_types[i][3]
+	
+	minetest.override_item(	"upmod:trapdoor_"..name, override)	
+	minetest.override_item(	"upmod:trapdoor_"..name.."_open", override)	
+end
+
+minetest.override_item("upmod:trapdoor_sakura", override)	
+minetest.override_item("upmod:trapdoor_sakura_open", override)
+minetest.override_item("upmod:trapdoor_bamboo", override)	
+minetest.override_item("upmod:trapdoor_bamboo_open", override)
