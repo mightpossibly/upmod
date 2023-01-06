@@ -1,3 +1,79 @@
+-- Cushion
+local cushionbox = {
+	type = "fixed",
+	fixed = {
+		{-0.5, -0.5, -0.5,  0.5, -0.05,  0.5},
+		}
+}
+
+minetest.register_node("upmod:cushion", {
+	description = "Cushion",
+	drawtype = "nodebox",
+	node_box = cushionbox,
+	selection_box = cushionbox,
+	paramtype = "light",
+	paramtype2 = "facedir",
+	use_texture_alpha = use_texture_alpha,
+	tiles = {
+		"upmod_cushion.png",
+		"upmod_cushion.png",
+		"upmod_cushion_side.png"
+	},
+	groups = {dig_immediate=2, disable_jump=1, fall_damage_add_percent=-100},
+	sounds = default.node_sound_defaults(),
+})
+
+-- Bouncy Jelly
+minetest.register_node("upmod:bouncy_jelly", {
+		description = "Bouncy Jelly",
+		tiles = {"upmod_bouncy_jelly.png",},
+		use_texture_alpha = "blend",
+		sunlight_propagates = true,
+		is_ground_content = false,
+		paramtype = "light",
+		drawtype = "glasslike",
+		groups = {
+				dig_immediate = 2,
+				bouncy = 95,
+				fall_damage_add_percent = -100,
+			},
+	sounds = default.node_sound_gravel_defaults(),
+})
+
+
+-- Trampoline
+local trampolinebox = {
+	type = "fixed",
+	fixed = {
+		{-0.5, -0.2, -0.5,  0.5,    0,  0.5},
+
+		{-0.5, -0.5, -0.5, -0.4, -0.2, -0.4},
+		{ 0.4, -0.5, -0.5,  0.5, -0.2, -0.4},
+		{ 0.4, -0.5,  0.4,  0.5, -0.2,  0.5},
+		{-0.5, -0.5,  0.4, -0.4, -0.2,  0.5},
+		}
+}
+
+minetest.register_node("upmod:trampoline", {
+		description = "Trampoline",
+		drawtype = "nodebox",
+		node_box = trampolinebox,
+		selection_box = trampolinebox,
+		paramtype = "light",
+		drop = "upmod:trampoline",
+		use_texture_alpha = use_texture_alpha,
+		tiles = {
+			"upmod_trampoline.png",
+			"upmod_trampoline.png",
+			"upmod_trampoline_side.png"
+		},
+		groups = {
+				dig_immediate = 2,
+				bouncy = 95,
+				fall_damage_add_percent = -100,
+			},
+})
+
 -- White Lamp
 minetest.register_node("upmod:white_lamp", {
 	description = "White Lamp",
