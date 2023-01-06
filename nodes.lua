@@ -23,6 +23,16 @@ minetest.register_node("upmod:cushion", {
 	sounds = default.node_sound_defaults(),
 })
 
+minetest.register_craft({
+    type = "shaped",
+    output = "upmod:cushion",
+    recipe = {
+        {"group:wool",	"group:wool",	"group:wool"},
+        {"group:wool",	"mobs:chicken_feather",	"group:wool"},
+		{"group:wool",	"group:wool",	"group:wool"}
+    }
+})
+
 -- Bouncy Jelly
 minetest.register_node("upmod:bouncy_jelly", {
 		description = "Bouncy Jelly",
@@ -38,6 +48,15 @@ minetest.register_node("upmod:bouncy_jelly", {
 				fall_damage_add_percent = -100,
 			},
 	sounds = default.node_sound_gravel_defaults(),
+})
+
+minetest.register_craft({
+    type = "shapeless",
+    output = "upmod:bouncy_jelly",
+    recipe = {
+        "ethereal:illumishroom2","ethereal:illumishroom2","ethereal:illumishroom2",
+        "ethereal:illumishroom2",
+    },
 })
 
 
@@ -72,6 +91,16 @@ minetest.register_node("upmod:trampoline", {
 				bouncy = 95,
 				fall_damage_add_percent = -100,
 			},
+})
+
+minetest.register_craft({
+    type = "shaped",
+    output = "upmod:trampoline",
+    recipe = {
+        {"",	"",	""},
+        {"basic_materials:steel_bar",	"basic_materials:plastic_strip",	"basic_materials:steel_bar"},
+		{"basic_materials:steel_bar",	"basic_materials:steel_bar",	"basic_materials:steel_bar"}
+    }
 })
 
 -- White Lamp
