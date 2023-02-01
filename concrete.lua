@@ -46,7 +46,7 @@ for i in ipairs(colors) do
 		description = (desc .. " Concrete"),
 		tiles = {"upmod_concrete_"..name..".png"},
 		is_ground_content = false,
-		groups = {cracky = 3},
+		groups = {cracky = 3, not_in_craft_guide = 1},
 		sounds = default.node_sound_stone_defaults(),
 	})
 

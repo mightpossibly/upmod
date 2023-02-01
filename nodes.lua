@@ -33,10 +33,12 @@ minetest.register_craft({
     }
 })
 
--- Bouncy Jelly
-minetest.register_node("upmod:bouncy_jelly", {
-		description = "Bouncy Jelly",
-		tiles = {"upmod_bouncy_jelly.png",},
+
+
+-- Add Slime Blocks + recipe
+minetest.register_node("upmod:slime", {
+		description = "Slime",
+		tiles = {"upmod_slime.png",},
 		use_texture_alpha = "blend",
 		sunlight_propagates = true,
 		is_ground_content = false,
@@ -57,6 +59,23 @@ minetest.register_craft({
         "ethereal:illumishroom2","ethereal:illumishroom2","ethereal:illumishroom2",
         "ethereal:illumishroom2",
     },
+})
+--[[
+-- Sticky Jelly
+minetest.register_node("upmod:sticky_jelly", {
+		description = "Sticky Jelly",
+		tiles = {"upmod_sticky_jelly.png",},
+		use_texture_alpha = "blend",
+		sunlight_propagates = true,
+		is_ground_content = false,
+		paramtype = "light",
+		drawtype = "glasslike",
+		groups = {
+				dig_immediate = 2,
+				bouncy = 95,
+				fall_damage_add_percent = -100,
+			},
+	sounds = default.node_sound_gravel_defaults(),
 })
 
 
@@ -91,7 +110,7 @@ minetest.register_node("upmod:trampoline", {
 				bouncy = 95,
 				fall_damage_add_percent = -100,
 			},
-})
+})--]]
 
 minetest.register_craft({
     type = "shaped",
@@ -103,7 +122,7 @@ minetest.register_craft({
     }
 })
 
--- White Lamp
+--[[ White Lamp
 minetest.register_node("upmod:white_lamp", {
 	description = "White Lamp",
 	paramtype2 = "facedir",
@@ -115,7 +134,9 @@ minetest.register_node("upmod:white_lamp", {
 	groups = {cracky = 3, oddly_breakable_by_hand = 3},
 	sounds = default.node_sound_glass_defaults(),
 	light_source = default.LIGHT_MAX,
-})
+})--]]
+
+minetest.register_alias("upmod:white_lamp", "upmod:white_sea_lantern")
 
 -- Ice
 minetest.register_node(":default:ice", {

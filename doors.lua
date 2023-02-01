@@ -74,14 +74,13 @@ local wood_types = {
 	{"Willow",		"ethereal:willow_wood", 		"willow",},
 	{"Banana Tree",	"ethereal:banana_wood", 		"banana",},
 	{"Olive Tree",	"ethereal:olive_wood", 			"olive",},
-	{"Redwood",		"ethereal:red_wood", 			"redwood",},
+	{"Redwood",		"ethereal:redwood_wood", 		"redwood",},
 	{"Frost Tree",	"ethereal:frost_wood", 			"frost",},
 	{"Healing Tree","ethereal:yellow_wood", 		"yellow",}
 }
 
 
-
-
+-- Register Doors in 'wood_types' table
 for i in ipairs(wood_types) do
 	local desc = wood_types[i][1]
 	local craft = wood_types[i][2]
@@ -111,50 +110,47 @@ for i in ipairs(wood_types) do
 	minetest.register_alias("upmod:door_jungle_a", "upmod:door_junglewood_a")
 	minetest.register_alias("upmod:door_jungle_b", "upmod:door_junglewood_b")
 	
+	-- Make doors compatible with mesecon signals
 	meseconify_door("upmod:door_"..name)
 	
+	-- Register Trapdoors in 'wood_types' table
 	doors.register_trapdoor("upmod:trapdoor_"..name, {
 		tiles = {
 			{name = "upmod:trapdoor_"..name..".png", backface_culling = true}
 		},
 		description = (desc.." Trapdoor"),
-	inventory_image = "upmod_trapdoor_"..name..".png",
-	wield_image = "upmod_trapdoor_"..name..".png",
-	tile_front = "upmod_trapdoor_"..name..".png",
-	tile_side = "upmod_trapdoor_"..name.."_side.png",
-	gain_open = 0.06,
-	gain_close = 0.13,
-		groups = {snappy = 1, choppy = 2, oddly_breakable_by_hand = 2, flammable = 2},
-		sound_open = "doors_glass_door_open",
-		sound_close = "doors_glass_door_close",
-	})
-	
-	meseconify_door("upmod:trapdoor_"..name)
-end
-
-
-
--- Override ethereal:sakura_door
-doors.register(":ethereal:door_sakura", {
-		tiles = {
-			{name = "ethereal_sakura_door.png", backface_culling = true}
-		},
-		description = ("Sakura Wood Door"),
-		inventory_image = "ethereal_sakura_door_inv.png",
+		inventory_image = "upmod_trapdoor_"..name..".png",
+		wield_image = "upmod_trapdoor_"..name..".png",
+		tile_front = "upmod_trapdoor_"..name..".png",
+		tile_side = "upmod_trapdoor_"..name.."_side.png",
+		gain_open = 0.06,
+		gain_close = 0.13,
 		groups = {snappy = 1, choppy = 2, oddly_breakable_by_hand = 2, flammable = 2},
 		sound_open = "doors_glass_door_open",
 		sound_close = "doors_glass_door_close",
 		recipe = {
-			{"ethereal:sakura_wood", "ethereal:sakura_wood"},
-			{"ethereal:sakura_wood", "ethereal:sakura_wood"},
-			{"ethereal:sakura_wood", "ethereal:sakura_wood"}
-		}
+			{craft, craft, craft},
+			{craft, craft, craft}
+			}
 	})
 	
-meseconify_door("ethereal:door_sakura")
+	-- 
+	meseconify_door("upmod:trapdoor_"..name)
+	
+	minetest.register_craft({
+		type = "shaped",
+		output = "upmod:trapdoor_"..name,
+		recipe = {
+			{craft,craft,craft},
+			{craft,craft,craft},
+			{"","",""}
+		}
+	})
+end
 
--- Add Bamboo Door (paper door)
 
+
+-- Register Bamboo Door (paper door)
 doors.register("upmod:door_bamboo", {
 		tiles = {
 			{name = "upmod_door_bamboo.png", backface_culling = true}
@@ -170,8 +166,6 @@ doors.register("upmod:door_bamboo", {
 			{"ethereal:bamboo_block", "ethereal:bamboo_block"}
 		}
 	})
-
-meseconify_door("upmod:door_bamboo")
 	
 doors.register_trapdoor("upmod:trapdoor_bamboo", {
 		tiles = {
@@ -194,7 +188,7 @@ doors.register_trapdoor("upmod:trapdoor_bamboo", {
 		}
 	})
 	
-meseconify_door("upmod:trapdoor_bamboo")
+
 	
 	doors.register_trapdoor("upmod:trapdoor_sakura", {
 		tiles = {
@@ -210,10 +204,38 @@ meseconify_door("upmod:trapdoor_bamboo")
 		groups = {snappy = 1, choppy = 2, oddly_breakable_by_hand = 1, flammable = 2},
 		sound_open = "doors_glass_door_open",
 		sound_close = "doors_glass_door_close",
+	})
+	
+meseconify_door("ethereal:door_sakura")
+meseconify_door("upmod:door_bamboo")
+
+-- Recipes (sakura, bamboo)
+	minetest.register_craft({
+		type = "shaped",
+		output = "upmod:trapdoor_sakura",
 		recipe = {
-			{"group:stick", "default:paper"},
-			{"default:paper", "group:stick"},
-			{"ethereal:yellow_wood", "group:stick"}
+			{"ethereal:sakura_wood", "ethereal:sakura_wood", "ethereal:sakura_wood"},
+			{"ethereal:sakura_wood", "ethereal:sakura_wood", "ethereal:sakura_wood"}
+		}
+	})
+
+	minetest.register_craft({
+		type = "shaped",
+		output = "ethereal:door_sakura",
+		recipe = {
+			{"ethereal:sakura_wood", "ethereal:sakura_wood"},
+			{"ethereal:sakura_wood", "ethereal:sakura_wood"},
+			{"ethereal:sakura_wood", "ethereal:sakura_wood"}
+		}
+	})
+	
+	-- Bamboo Trapdoor
+	minetest.register_craft({
+		type = "shaped",
+		output = "upmod:trapdoor_bamboo",
+		recipe = {
+			{"ethereal:bamboo_block", "default:paper", "ethereal:bamboo_block"},
+			{"ethereal:bamboo_block", "group:stick", "ethereal:bamboo_block"}
 		}
 	})
 
