@@ -36,8 +36,8 @@ minetest.register_craft({
 
 
 -- Add Slime Blocks + recipe
-minetest.register_node("upmod:slime", {
-		description = "Slime",
+minetest.register_node("upmod:slime_block", {
+		description = "Slime Block",
 		tiles = {"upmod_slime.png",},
 		use_texture_alpha = "blend",
 		sunlight_propagates = true,
@@ -54,7 +54,7 @@ minetest.register_node("upmod:slime", {
 
 minetest.register_craft({
     type = "shapeless",
-    output = "upmod:bouncy_jelly",
+    output = "upmod:slime_block",
     recipe = {
         "ethereal:illumishroom2","ethereal:illumishroom2","ethereal:illumishroom2",
         "ethereal:illumishroom2",
