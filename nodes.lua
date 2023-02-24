@@ -19,7 +19,7 @@ minetest.register_node("upmod:cushion", {
 		"upmod_cushion.png",
 		"upmod_cushion_side.png"
 	},
-	groups = {dig_immediate=2, disable_jump=1, fall_damage_add_percent=-100},
+	groups = {dig_immediate=2, bouncy = 0, fall_damage_add_percent=-100},
 	sounds = default.node_sound_defaults(),
 })
 
@@ -33,11 +33,28 @@ minetest.register_craft({
     }
 })
 
-
+minetest.register_node("upmod:honey_block", {
+		description = "Honey Block",
+		tiles = {"upmod_honey.png",},
+		use_texture_alpha = "blend",
+		sunlight_propagates = true,
+		is_ground_content = false,
+		paramtype = "light",
+		drawtype = "glasslike",
+		groups = {
+				dig_immediate = 2,
+				bouncy = 0,
+				fall_damage_add_percent = -100,
+				disable_jump=1,
+				not_in_creative_inventory = 1,
+				not_in_craft_guide = 1,
+			},
+	sounds = default.node_sound_gravel_defaults(),
+})
 
 -- Add Slime Blocks + recipe
-minetest.register_node("upmod:slime", {
-		description = "Slime",
+minetest.register_node("upmod:slime_block", {
+		description = "Slime Block",
 		tiles = {"upmod_slime.png",},
 		use_texture_alpha = "blend",
 		sunlight_propagates = true,
@@ -54,31 +71,13 @@ minetest.register_node("upmod:slime", {
 
 minetest.register_craft({
     type = "shapeless",
-    output = "upmod:bouncy_jelly",
+    output = "upmod:slime_block",
     recipe = {
-        "ethereal:illumishroom2","ethereal:illumishroom2","ethereal:illumishroom2",
-        "ethereal:illumishroom2",
+        "mesecons_materials:glue","mesecons_materials:glue","mesecons_materials:glue",
+        "group:water_bucket","bonemeal:bonemeal"
     },
 })
 --[[
--- Sticky Jelly
-minetest.register_node("upmod:sticky_jelly", {
-		description = "Sticky Jelly",
-		tiles = {"upmod_sticky_jelly.png",},
-		use_texture_alpha = "blend",
-		sunlight_propagates = true,
-		is_ground_content = false,
-		paramtype = "light",
-		drawtype = "glasslike",
-		groups = {
-				dig_immediate = 2,
-				bouncy = 95,
-				fall_damage_add_percent = -100,
-			},
-	sounds = default.node_sound_gravel_defaults(),
-})
-
-
 -- Trampoline
 local trampolinebox = {
 	type = "fixed",
@@ -110,7 +109,7 @@ minetest.register_node("upmod:trampoline", {
 				bouncy = 95,
 				fall_damage_add_percent = -100,
 			},
-})--]]
+})
 
 minetest.register_craft({
     type = "shaped",

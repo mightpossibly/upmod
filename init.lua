@@ -7,6 +7,7 @@ dofile(modpath .. "/concrete.lua")
 dofile(modpath .. "/smoothstones.lua")
 dofile(modpath .. "/sea_lanterns.lua")
 dofile(modpath .. "/doors.lua")
+dofile(modpath .. "/overrides.lua")
 
 -- Misc. aliases
 --minetest.register_alias("upmod:sea_lantern", "xocean:sea_lantern")
