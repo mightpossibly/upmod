@@ -25,3 +25,5 @@ minetest.register_alias("moreblocks:checker_stone_tile", "moreblocks:stone_tile"
 minetest.register_alias("moreblocks:moreblocks:iron_checker", "moreblocks:stone_tile")
 --minetest.register_alias("moreblocks:", "moreblocks:stone_tile")
 
+
+minetest.register_alias_force("moretrees:palm_trunk", "ethereal:palm_trunk")
